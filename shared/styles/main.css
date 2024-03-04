@@ -1,0 +1,9 @@
+@import './base.css';
+
+a {
+  text-decoration: none;
+}
+
+.container{
+  @apply max-w-[1280px] mx-auto;
+}
