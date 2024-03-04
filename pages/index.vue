@@ -1,4 +1,5 @@
 <template>
+  <productBlock  v-if="modalState" v-model="modalState" />
   <headerCommon />
     <div class="container">
       <div class="carousel">
@@ -127,6 +128,12 @@ import headerCommon from '../widgets/headerCommon.vue';
 import footerCommon from "../widgets/footerCommon.vue";
 import homeCarousel from "../widgets/homeCarousel.vue";
 import ProductCard from "../features/productCard.vue";
+import ProductBlock from "~/widgets/productBlock.vue";
+import {useModalCard} from "~/entities/stores/modalCard";
+import {storeToRefs} from "pinia";
+
+const modalStore = useModalCard()
+const { idProduct, modalState } = storeToRefs(modalStore)
 </script>
 
 <style lang="postcss" scoped>

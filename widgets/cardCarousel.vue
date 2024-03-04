@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 240px">
+  <div style="width: 240px; height: 230px;">
     <Swiper
         :spaceBetween="30"
         :pagination="true"
@@ -7,10 +7,10 @@
         :modules="[Pagination]"
     >
       <swiper-slide>
-          <img src="@/shared/images/mok/felix.png" alt="image" >
+          <img class="image" src="@/shared/images/mok/felix.png" alt="image" >
       </swiper-slide>
       <swiper-slide>
-        <img src="@/shared/images/mok/felix.png" alt="image" >
+        <img class="image" src="@/shared/images/mok/felix.png" alt="image" >
       </swiper-slide>
     </Swiper>
   </div>
@@ -25,6 +25,9 @@ import 'swiper/css/pagination';
 </script>
 
 <style lang="postcss">
+.image{
+  @apply w-full h-[200px] object-contain;
+}
 
 .swiper-pagination{
 
